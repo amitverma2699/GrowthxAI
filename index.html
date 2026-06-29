@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,9 +77,9 @@
                 
             </div>
             
-                    <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4">
                 <!-- Smooth Theme Toggle -->
-                <button id="theme-toggle" 
+               <button id="theme-toggle" 
                         class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-zinc-800 transition-all">
                     <i id="theme-icon" class="fas fa-moon text-xl"></i>
                 </button>
@@ -664,38 +664,44 @@
     });
     </script>
     <script>
-    const toggle = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
     const html = document.documentElement;
 
-    function setTheme(isDark) {
-        if (isDark) {
-            html.classList.add('dark');
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-            localStorage.theme = 'dark';
-        } else {
+    // Check saved preference or system preference
+    function initTheme() {
+        if (localStorage.theme === 'light' || 
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
             html.classList.remove('dark');
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-            localStorage.theme = 'light';
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            html.classList.add('dark');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
         }
     }
 
-    // Load saved preference
-    if (localStorage.theme === 'dark' || 
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        setTheme(true);
-    } else {
-        setTheme(false);
+    // Toggle function
+    function toggleTheme() {
+        if (html.classList.contains('dark')) {
+            html.classList.remove('dark');
+            localStorage.theme = 'light';
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            html.classList.add('dark');
+            localStorage.theme = 'dark';
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
     }
 
-    // Toggle with smooth animation
-    toggle.addEventListener('click', () => {
-        setTheme(!html.classList.contains('dark'));
-    });
-</script>
-</script>
+    // Initialize
+    initTheme();
 
+    // Click handler
+    toggleBtn.addEventListener('click', toggleTheme);
+</script>
 </body>
 </html>
