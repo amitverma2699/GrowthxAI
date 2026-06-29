@@ -69,6 +69,11 @@
                 
             </div>
             
+            <!-- Theme Toggle -->
+                <button id="theme-toggle" 
+                        class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-zinc-800 transition-colors">
+                    <i id="theme-icon" class="fas fa-moon text-xl"></i>
+                </button>
             
             <button onclick="document.getElementById('cta').scrollIntoView({ behavior: 'smooth' })"
                     class="bg-white text-zinc-900 px-6 py-3 rounded-2xl font-semibold hover:bg-blue-600 hover:text-white transition-all flex items-center gap-2">
@@ -647,6 +652,37 @@
         if (diff > 50) nextSlide();
         else if (diff < -50) prevSlide();
     });
+    </script>
+    <script>
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const html = document.documentElement;
+
+    function setTheme(isDark) {
+        if (isDark) {
+            html.classList.add('dark');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.theme = 'dark';
+        } else {
+            html.classList.remove('dark');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.theme = 'light';
+        }
+    }
+
+    // Load saved theme
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme(true);
+    } else {
+        setTheme(false);
+    }
+
+    toggle.addEventListener('click', () => {
+        setTheme(!html.classList.contains('dark'));
+    });
 </script>
+
 </body>
 </html>
