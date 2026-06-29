@@ -269,43 +269,60 @@
         </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-24 bg-black">
+       <!-- Services (Former Pricing) -->
+    <section id="pricing" class="py-24 bg-black">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <h2 class="heading text-5xl font-semibold tracking-tighter text-center mb-16">Our Revenue-Focused Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="heading text-5xl font-semibold tracking-tighter text-center mb-4">Our Services</h2>
+            <p class="text-center text-zinc-400 mb-16">Choose what you need. Custom packages available.</p>
+            
+            <div class="max-w-4xl mx-auto space-y-4">
                 
-                <!-- Meta Ads Management -->
-                <div class="bg-zinc-900 rounded-3xl p-10 hover:scale-105 transition-transform">
-                    <div class="flex gap-4 mb-6">
-                        <i class="fab fa-facebook-f text-4xl text-blue-500"></i>
-                        <i class="fab fa-instagram text-4xl text-pink-500"></i>
-                        <i class="fab fa-youtube text-4xl text-red-500"></i>
-                        <i class="fab fa-whatsapp text-4xl text-green-500"></i>
+                <details class="bg-zinc-900 rounded-3xl p-8 group">
+                    <summary class="font-semibold text-xl cursor-pointer flex justify-between items-center">
+                        Meta Ads Management
+                        <span class="text-3xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="mt-6 text-zinc-400">
+                        Facebook & Instagram lead generation, retargeting, WhatsApp click-to-chat ads, and full campaign optimization.
                     </div>
-                    <h3 class="text-2xl font-semibold">Meta Ads Management</h3>
-                    <p class="text-zinc-400 mt-4">Lead generation + retargeting campaigns that actually convert across Facebook, Instagram, YouTube & WhatsApp.</p>
-                </div>
+                </details>
 
-                <!-- AI & WhatsApp Automation -->
-                <div class="bg-zinc-900 rounded-3xl p-10 hover:scale-105 transition-transform">
-                    <div class="flex gap-4 mb-6">
-                        <i class="fas fa-robot text-4xl text-purple-500"></i>
-                        <i class="fab fa-whatsapp text-4xl text-green-500"></i>
+                <details class="bg-zinc-900 rounded-3xl p-8 group">
+                    <summary class="font-semibold text-xl cursor-pointer flex justify-between items-center">
+                        AI & WhatsApp Automation
+                        <span class="text-3xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="mt-6 text-zinc-400">
+                        Automated responses, lead qualification, appointment booking, follow-up sequences using n8n and AI chatbots.
                     </div>
-                    <h3 class="text-2xl font-semibold">AI & WhatsApp Automation</h3>
-                    <p class="text-zinc-400 mt-4">24/7 lead qualification, follow-ups & appointment booking.</p>
-                </div>
+                </details>
 
-                <!-- CRM Implementation -->
-                <div class="bg-zinc-900 rounded-3xl p-10 hover:scale-105 transition-transform">
-                    <div class="flex gap-4 mb-6">
-                        <i class="fas fa-chart-line text-4xl text-emerald-500"></i>
+                <details class="bg-zinc-900 rounded-3xl p-8 group">
+                    <summary class="font-semibold text-xl cursor-pointer flex justify-between items-center">
+                        CRM Implementation
+                        <span class="text-3xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="mt-6 text-zinc-400">
+                        Lead tracking, pipeline management, customer journey automation, and detailed analytics dashboard.
                     </div>
-                    <h3 class="text-2xl font-semibold">CRM Implementation</h3>
-                    <p class="text-zinc-400 mt-4">Full pipeline visibility and automated customer journey.</p>
-                </div>
+                </details>
 
+                <details class="bg-zinc-900 rounded-3xl p-8 group">
+                    <summary class="font-semibold text-xl cursor-pointer flex justify-between items-center">
+                        Full AI Growth System
+                        <span class="text-3xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="mt-6 text-zinc-400">
+                        Complete integration of Meta Ads + WhatsApp + AI Chatbots + CRM. End-to-end automated growth engine.
+                    </div>
+                </details>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="document.getElementById('cta').scrollIntoView({ behavior: 'smooth' })" 
+                        class="bg-white text-zinc-900 px-10 py-4 rounded-3xl font-semibold hover:bg-blue-600 hover:text-white transition-all">
+                    Get Custom Quote
+                </button>
             </div>
         </div>
     </section>
@@ -439,49 +456,54 @@
         </div>
     </section>
     <!-- Pricing -->
-    <section id="pricing" class="py-24 bg-black">
+   
+
+        <!-- FAQ Section -->
+    <section class="py-24 bg-zinc-900">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <h2 class="heading text-5xl font-semibold tracking-tighter text-center mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-center text-zinc-400 mb-16">All plans include setup, management & monthly reporting</p>
+            <h2 class="heading text-5xl font-semibold tracking-tighter text-center mb-16">Frequently Asked Questions</h2>
             
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-zinc-900 rounded-3xl p-10">
-                    <h3 class="font-semibold text-xl">Starter</h3>
-                    <div class="text-5xl font-semibold mt-4">₹29,999<span class="text-base font-normal text-zinc-400">/mo</span></div>
-                    <ul class="mt-8 space-y-4 text-sm">
-                        <li>✓ Meta Ads Management</li>
-                        <li>✓ Basic WhatsApp Automation</li>
-                        <li>✓ Monthly Report</li>
-                    </ul>
-                    <button onclick="alert('Thank you! Our team will contact you shortly.')" 
-                            class="w-full mt-12 bg-white text-zinc-900 py-4 rounded-2xl font-semibold">Choose Starter</button>
-                </div>
+            <div class="max-w-3xl mx-auto space-y-4">
                 
-                <div class="bg-gradient-to-b from-blue-600 to-blue-700 rounded-3xl p-10 scale-105 shadow-2xl relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-zinc-900 text-xs font-bold px-6 py-1 rounded-full">RECOMMENDED</div>
-                    <h3 class="font-semibold text-xl">Growth</h3>
-                    <div class="text-5xl font-semibold mt-4">₹59,999<span class="text-base font-normal opacity-75">/mo</span></div>
-                    <ul class="mt-8 space-y-4 text-sm">
-                        <li>✓ Everything in Starter</li>
-                        <li>✓ Advanced AI Chatbots</li>
-                        <li>✓ CRM Integration</li>
-                        <li>✓ Weekly Optimization</li>
-                    </ul>
-                    <button onclick="alert('Thank you! Our team will contact you shortly.')" 
-                            class="w-full mt-12 bg-white text-zinc-900 py-4 rounded-2xl font-semibold">Choose Growth</button>
-                </div>
-                
-                <div class="bg-zinc-900 rounded-3xl p-10">
-                    <h3 class="font-semibold text-xl">AI Growth System</h3>
-                    <div class="text-5xl font-semibold mt-4">₹99,999<span class="text-base font-normal text-zinc-400">+/mo</span></div>
-                    <ul class="mt-8 space-y-4 text-sm">
-                        <li>✓ Everything in Growth</li>
-                        <li>✓ Custom n8n Workflows</li>
-                        <li>✓ Dedicated Manager</li>
-                    </ul>
-                    <button onclick="alert('Thank you! Our team will contact you shortly.')" 
-                            class="w-full mt-12 bg-white text-zinc-900 py-4 rounded-2xl font-semibold">Get Enterprise</button>
-                </div>
+                <details class="bg-zinc-800 rounded-3xl p-6 group">
+                    <summary class="font-medium cursor-pointer flex justify-between items-center">
+                        How quickly can I see results?
+                        <span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-zinc-400 mt-4">Most clients see their first qualified leads within 7-14 days. Significant appointment booking and revenue growth typically appears within 30-45 days.</p>
+                </details>
+
+                <details class="bg-zinc-800 rounded-3xl p-6 group">
+                    <summary class="font-medium cursor-pointer flex justify-between items-center">
+                        Do you work with any industry?
+                        <span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-zinc-400 mt-4">Yes. We specialize in Real Estate, Dental Clinics, Healthcare, Coaching Institutes, Solar Companies, Interior Designers, and other service-based local businesses.</p>
+                </details>
+
+                <details class="bg-zinc-800 rounded-3xl p-6 group">
+                    <summary class="font-medium cursor-pointer flex justify-between items-center">
+                        What is the minimum contract period?
+                        <span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-zinc-400 mt-4">Minimum 3 months. This allows us to set up the full AI system and show consistent results.</p>
+                </details>
+
+                <details class="bg-zinc-800 rounded-3xl p-6 group">
+                    <summary class="font-medium cursor-pointer flex justify-between items-center">
+                        Do I need to provide my own ad budget?
+                        <span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-zinc-400 mt-4">Yes. We manage your Meta Ads but the ad spend (₹15,000–50,000+/month) is paid directly to Meta. We focus on maximizing ROI from that spend.</p>
+                </details>
+
+                <details class="bg-zinc-800 rounded-3xl p-6 group">
+                    <summary class="font-medium cursor-pointer flex justify-between items-center">
+                        Can I cancel anytime?
+                        <span class="text-2xl group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="text-zinc-400 mt-4">Yes. You can cancel with 30 days notice after the minimum commitment period.</p>
+                </details>
             </div>
         </div>
     </section>
