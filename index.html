@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        
+       
         body { font-family: 'Inter', system_ui, sans-serif; }
         .heading { font-family: 'Space Grotesk', sans-serif; }
-        
+       
         .nav-link { transition: all 0.3s ease; }
         .nav-link.active { color: #3b82f6; position: relative; }
         .nav-link.active:after {
@@ -21,55 +21,43 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background: #3b82f6; 
+            background: #3b82f6;
         }
-                .animate-marquee {
+
+        .animate-marquee {
             animation: marquee 35s linear infinite;
         }
-        
+       
         @keyframes marquee {
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
         }
-        
+       
         .animate-marquee:hover {
             animation-play-state: paused;
         }
+
         .footer-link { transition: all 0.2s ease; }
         .footer-link:hover { color: #60a5fa; transform: translateX(4px); }
-                /* Smooth Theme Transition */
+
+        /* Smooth Theme Transition */
         * {
             transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
         }
+
+        /* Light Mode Navbar Fix */
+        html:not(.dark) nav {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            border-color: #e5e5e5 !important;
+            color: #18181b !important;
+        }
         
-        :root {
-                --bg-main:#ffffff;
-                --nav-bg: rgba(255,255,255,0.92);
-                --nav-border:#d4d4d8;
+        html:not(.dark) .nav-link {
+            color: #27272a !important;
         }
-
-        html.dark {
-                --bg-main:#09090b;
-                --nav-bg: rgba(9,9,11,0.92);
-                --nav-border:#3f3f46;
-        }
-
-        nav {
-        background: var(--nav-bg) !important;
-        border-color: var(--nav-border) !important;
-    }
-    
-        nav a,
-        nav span {
-            color: var(--text-main) !important;
-        }
-
-        nav .text-zinc-400 {
-            color: var(--text-muted) !important;
-        }
-
-        #theme-toggle:hover {
-            background: var(--bg-card) !important;
+        
+        html:not(.dark) .text-zinc-400 {
+            color: #71717a !important;
         }
     </style>
 </head>
@@ -77,20 +65,19 @@
     
     <!-- Navbar -->
    <!-- Navbar with Logo -->
-   <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b">
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b">
         <div class="max-w-screen-2xl mx-auto px-8 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <!-- Your New Logo -->
-                <img src="https://raw.githubusercontent.com/amitverma2699/GrowthxAI/main/GrowthXLeo%20Logo.jpg" 
-                     alt="GrowthXLeo" 
+                <img src="https://raw.githubusercontent.com/amitverma2699/GrowthxAI/main/GrowthXLeo%20Logo.jpg"
+                     alt="GrowthXLeo"
                      class="w-11 h-11 object-contain">
-                
+               
                 <div class="leading-none">
                     <span class="heading text-2xl font-semibold tracking-tighter">GrowthXLeo</span>
                     <span class="block text-xs text-zinc-400 -mt-1">Growth Systems</span>
                 </div>
             </div>
-            
+           
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#problem" class="nav-link">Problem</a>
@@ -98,23 +85,22 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#results" class="nav-link">Results</a>
                 <a href="#faqs" class="nav-link">FAQs</a>
-                
             </div>
-            
-                <div class="flex items-center gap-4">
-                <!-- Smooth Theme Toggle -->
-               <button id="theme-toggle" 
+           
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle"
                         class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-zinc-800 transition-all">
                     <i id="theme-icon" class="fas fa-moon text-xl"></i>
                 </button>
-                
-            
+               
                 <button onclick="document.getElementById('cta').scrollIntoView({ behavior: 'smooth' })"
                         class="bg-white text-zinc-900 px-6 py-3 rounded-2xl font-semibold hover:bg-blue-600 hover:text-white transition-all flex items-center gap-2">
                     <i class="fas fa-calendar"></i>
                     Book Strategy Call
                 </button>
-                </div>
+            </div>
+        </div>
     </nav>
 
     <!-- HERO -->
@@ -687,45 +673,41 @@
         else if (diff < -50) prevSlide();
     });
     </script>
-    <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const html = document.documentElement;
+   <script>
+        // Theme Toggle Script
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
 
-    // Check saved preference or system preference
-    function initTheme() {
-        if (localStorage.theme === 'light' || 
-            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-            html.classList.remove('dark');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        } else {
-            html.classList.add('dark');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
+        function initTheme() {
+            if (localStorage.theme === 'light' || 
+                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                html.classList.remove('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                html.classList.add('dark');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
         }
-    }
 
-    // Toggle function
-    function toggleTheme() {
-        if (html.classList.contains('dark')) {
-            html.classList.remove('dark');
-            localStorage.theme = 'light';
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        } else {
-            html.classList.add('dark');
-            localStorage.theme = 'dark';
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
+        function toggleTheme() {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.theme = 'light';
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                html.classList.add('dark');
+                localStorage.theme = 'dark';
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
         }
-    }
 
-    // Initialize
-    initTheme();
-
-    // Click handler
-    toggleBtn.addEventListener('click', toggleTheme);
-</script>
+        initTheme();
+        toggleBtn.addEventListener('click', toggleTheme);
+    </script>
 </body>
 </html>
