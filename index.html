@@ -45,6 +45,13 @@
         .dark body {
             background-color: #09090b;
         }
+        nav a,
+        nav span {
+            color: var(--text-main) !important;
+        }
+        nav .text-zinc-400 {
+            color: var(--text-muted) !important;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -53,7 +60,7 @@
 
     <!-- Navbar -->
    <!-- Navbar with Logo -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-lg border-b border-zinc-800">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b">
         <div class="max-w-screen-2xl mx-auto px-8 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <!-- Your New Logo -->
