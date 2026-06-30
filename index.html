@@ -6,7 +6,7 @@
     <title>GrowthXLeo | AI Lead Generation Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
+   <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
        
         body { font-family: 'Inter', system_ui, sans-serif; }
@@ -24,40 +24,29 @@
             background: #3b82f6;
         }
 
-        .animate-marquee {
-            animation: marquee 35s linear infinite;
-        }
-       
-        @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
-       
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-
-        .footer-link { transition: all 0.2s ease; }
-        .footer-link:hover { color: #60a5fa; transform: translateX(4px); }
-
         /* Smooth Theme Transition */
         * {
             transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
         }
 
-        /* Light Mode Navbar Fix */
+        /* Light Mode Body Background */
+        html:not(.dark) body {
+            background-color: #f8fafc;
+            color: #18181b;
+        }
+
+        /* Light Mode Navbar */
         html:not(.dark) nav {
             background-color: rgba(255, 255, 255, 0.95) !important;
-            border-color: #e5e5e5 !important;
-            color: #18181b !important;
+            border-color: #e2e8f0 !important;
         }
-        
+
         html:not(.dark) .nav-link {
             color: #27272a !important;
         }
-        
+
         html:not(.dark) .text-zinc-400 {
-            color: #71717a !important;
+            color: #64748b !important;
         }
     </style>
 </head>
