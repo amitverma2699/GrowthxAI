@@ -43,20 +43,22 @@
         }
         
         :root {
+                --bg-main:#ffffff;
                 --nav-bg: rgba(255,255,255,0.92);
-                --nav-border: #d4d4d8;
+                --nav-border:#d4d4d8;
         }
 
         html.dark {
+                --bg-main:#09090b;
                 --nav-bg: rgba(9,9,11,0.92);
-                --nav-border: #3f3f46;
+                --nav-border:#3f3f46;
         }
 
         nav {
-            background: var(--nav-bg) !important;
-            border-color: var(--nav-border) !important;
-        }
-
+        background: var(--nav-bg) !important;
+        border-color: var(--nav-border) !important;
+    }
+    
         nav a,
         nav span {
             color: var(--text-main) !important;
@@ -73,8 +75,6 @@
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
     
-    
-
     <!-- Navbar -->
    <!-- Navbar with Logo -->
    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b">
