@@ -25,59 +25,118 @@ body { font-family: 'Inter', sans-serif; }
 }
 
 /* LIGHT MODE */
-html:not(.dark) body{
-    background:#f8fafc!important;
-    color:#111827!important;
+html body {
+    background: #f8fafc;
+    color: #111827;
 }
 
-html:not(.dark) nav{
-    background:rgba(255,255,255,.95)!important;
-    border-color:#e5e7eb!important;
+html nav {
+    background: rgba(255,255,255,.95) !important;
+    border-color: #e5e7eb !important;
 }
 
-html:not(.dark) .bg-zinc-950,
-html:not(.dark) .bg-zinc-900,
-html:not(.dark) .bg-zinc-800,
-html:not(.dark) .bg-black,
-html:not(.dark) .bg-zinc-800\/70{
-    background:#ffffff!important;
+html .bg-zinc-950,
+html .bg-zinc-900,
+html .bg-zinc-800,
+html .bg-black,
+html .bg-zinc-800\/70 {
+    background: #ffffff !important;
 }
 
-html:not(.dark) .from-zinc-950,
-html:not(.dark) .via-zinc-900,
-html:not(.dark) .to-black{
-    background:#f8fafc!important;
+html .from-zinc-950,
+html .via-zinc-900,
+html .to-black {
+    background: #f8fafc !important;
 }
 
-html:not(.dark) .text-white{
-    color:#111827!important;
+html .text-white {
+    color: #111827 !important;
 }
 
-html:not(.dark) .text-zinc-300,
-html:not(.dark) .text-zinc-400,
-html:not(.dark) .text-zinc-500{
-    color:#6b7280!important;
+html .text-zinc-300,
+html .text-zinc-400,
+html .text-zinc-500 {
+    color: #6b7280 !important;
 }
 
-html:not(.dark) .border-white\/10,
-html:not(.dark) .border-zinc-700,
-html:not(.dark) .border-zinc-800{
-    border-color:#e5e7eb!important;
+html .border-white\/10,
+html .border-zinc-700,
+html .border-zinc-800 {
+    border-color: #e5e7eb !important;
 }
 
-html:not(.dark) .bg-white\/10{
-    background:rgba(0,0,0,.05)!important;
+html .bg-white\/10 {
+    background: rgba(0,0,0,.05) !important;
 }
 
-html:not(.dark) .bg-black\/70{
-    background:rgba(255,255,255,.85)!important;
+html .bg-black\/70 {
+    background: rgba(255,255,255,.85) !important;
+    color: #111827 !important;
 }
 
-html:not(.dark) #theme-toggle:hover{
-    background:#f1f5f9!important;
+html #theme-toggle:hover {
+    background: #f1f5f9 !important;
 }
 
-html:not(.dark) nav a,
-html:not(.dark) nav span{
-    color:#111827!important;
+html nav a,
+html nav span {
+    color: #111827 !important;
+}
+
+/* DARK MODE - Override for dark theme */
+html.dark body {
+    background: #18181b !important;
+    color: #ffffff !important;
+}
+
+html.dark nav {
+    background: rgba(24,24,27,.95) !important;
+    border-color: rgba(255,255,255,.1) !important;
+}
+
+html.dark .bg-zinc-950,
+html.dark .bg-zinc-900,
+html.dark .bg-zinc-800,
+html.dark .bg-black,
+html.dark .bg-zinc-800\/70 {
+    background: #27272a !important;
+}
+
+html.dark .from-zinc-950,
+html.dark .via-zinc-900,
+html.dark .to-black {
+    background: linear-gradient(to bottom right, #18181b, #09090b) !important;
+}
+
+html.dark .text-white {
+    color: #ffffff !important;
+}
+
+html.dark .text-zinc-300,
+html.dark .text-zinc-400,
+html.dark .text-zinc-500 {
+    color: #a1a1aa !important;
+}
+
+html.dark .border-white\/10,
+html.dark .border-zinc-700,
+html.dark .border-zinc-800 {
+    border-color: rgba(255,255,255,.1) !important;
+}
+
+html.dark .bg-white\/10 {
+    background: rgba(255,255,255,.1) !important;
+}
+
+html.dark .bg-black\/70 {
+    background: rgba(0,0,0,.7) !important;
+}
+
+html.dark #theme-toggle:hover {
+    background: rgba(255,255,255,.1) !important;
+}
+
+html.dark nav a,
+html.dark nav span {
+    color: #ffffff !important;
 }
